@@ -1,0 +1,26 @@
+airflow:
+  outputs:
+    env_raw:
+      dataset: airflow_raw
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /secrets
+      location: US
+      method: service-account
+      priority: interactive
+      project: sqsh-developer-pocs
+      threads: 4
+      type: bigquery
+
+    env_customer:
+      dataset: airflow_customer
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: /secrets
+      location: US
+      method: service-account
+      priority: interactive
+      project: sqsh-developer-pocs
+      threads: 4
+      type: bigquery
+  target: dev
